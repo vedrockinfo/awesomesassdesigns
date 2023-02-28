@@ -1,0 +1,26 @@
+.hue-hexa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  .container {
+    animation: animate 4s linear infinite;
+    .hexagon {
+      position: relative;
+      width: 100px;
+      height: 110px;
+      background: #0f0;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
